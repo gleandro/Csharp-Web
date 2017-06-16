@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="/Content/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Listado de Areas</h1>
+            <table class="table">
+                <tr>
+                    <th>
+                        Codigo
+                    </th>
+                    <th>
+                        Descripcion
+                    </th>
+                    <th>
+                        Editar
+                    </th>
+                    <th>
+                        Eliminar
+                    </th>
+                </tr>
+
+                @foreach (var item in ViewBag.areas)
+                {
+                    <tr>
+                        <td>
+                            @item.are_cod
+                        </td>
+                        <td>
+                            @item.are_des
+                        </td>
+                        <td>
+                            <form action="~/Area/Editar" method="post">
+                                <input type="hidden" value="@item.are_cod" name="codigo" />
+                                <p><button class="btn btn-primary btn-lg" type="submit">Editar</button></p>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="~/Area/Eliminar" method="post">
+                                <input type="hidden" value="@item.are_cod" name="codigo" />
+                                <p><button class="btn btn-primary btn-lg" type="submit">Eliminar</button></p>
+                            </form>
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="/Scripts/bootstrap.min.js"></script>
+</body>
+</html>
