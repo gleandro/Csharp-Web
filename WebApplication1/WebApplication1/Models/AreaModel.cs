@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
-using WebApplication1.Models;
 
 namespace WebApplication1.Models
 {
@@ -12,21 +9,6 @@ namespace WebApplication1.Models
     {
 
         DataEmpresaDataContext contexto = new DataEmpresaDataContext();
-
-        public List<object> listarArea_sql()
-        {
-            Conexion cn = new Conexion();
-            string sql= "select * from area";
-            DataTable dato = cn.Ejecutar(sql);
-            SqlCommand sql_conn;
-            foreach (var area in dato)
-            {
-                area.
-            }
-
-            return List<object>;
-        }
-
 
         public List<area> listarArea()
         {

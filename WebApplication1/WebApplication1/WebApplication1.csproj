@@ -148,7 +148,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AreaModel.cs" />
-    <Compile Include="Models\Conexion.cs" />
     <Compile Include="Models\DataEmpresa.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
